@@ -16,11 +16,7 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = var.az_resource_group
   location = var.az_location
-  tags = {
-    owner   = "Brendon Caligari"
-    project = "tf training"
-    status  = "in use"
-  }
+  tags     = var.project_tags
 }
 
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip

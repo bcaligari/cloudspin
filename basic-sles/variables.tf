@@ -30,12 +30,22 @@ variable "admin_key" {
 
 variable "az_source_image" {
   description = "Default source image to spin up"
-  type        = map(any)
+  type        = map(string)
 
   default = {
     publisher = "suse"
     offer     = "sles-sap-15-sp2-byos"
     sku       = "gen2"
     version   = "latest"
+  }
+}
+
+variable "project_tags" {
+  description = "Tags for this project"
+  type        = map(string)
+
+  default = {
+    owner  = "Brendon Caligari"
+    status = "in use"
   }
 }

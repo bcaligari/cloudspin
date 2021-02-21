@@ -1,5 +1,4 @@
-az_resource_group  = "rg-bc-meh"
-az_vm_default_size = "Standard_B2s"
+az_resource_group = "rg-bc-meh"
 
 az_source_image = {
   publisher = "suse"
