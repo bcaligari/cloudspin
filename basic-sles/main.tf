@@ -33,6 +33,7 @@ resource "azurerm_virtual_network" "vnet" {
   location            = azurerm_resource_group.rg.location
   name                = "vnet-default"
   address_space       = ["172.16.0.0/16"]
+
   depends_on = [
     azurerm_public_ip.pip
   ]
