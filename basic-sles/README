@@ -1,0 +1,2 @@
+- deploys a single sles instance
+- builds VM using azurerm resources not modules

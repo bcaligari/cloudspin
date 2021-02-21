@@ -1,29 +1,37 @@
-variable "az_location" {
-  description = "Azure location for resources"
-  default     = "westeurope"
+variable "az_resource_group" {
+  description = "Azure resource group"
   type        = string
+  default     = "rg-bc-simple-sles"
 }
 
-variable "vm_default_size" {
-  description = "Default size for disposable VMs"
-  default     = "Standard_B1ms"
+variable "az_location" {
+  description = "Azure location for resources"
   type        = string
+  default     = "westeurope"
+}
+
+variable "az_vm_default_size" {
+  description = "Default size for disposable VMs"
+  type        = string
+  default     = "Standard_B1ms"
 }
 
 variable "admin_user" {
   description = "Default admin user"
-  default     = "sysop"
   type        = string
+  default     = "sysop"
 }
 
 variable "admin_key" {
   description = "Default admin user SSH key path"
-  default     = "~/.ssh/id_rsa.pub"
   type        = string
+  default     = "~/.ssh/id_rsa.pub"
 }
 
-variable "source_image" {
+variable "az_source_image" {
   description = "Default source image to spin up"
+  type        = map(any)
+
   default = {
     publisher = "suse"
     offer     = "sles-sap-15-sp2-byos"

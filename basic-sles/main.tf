@@ -14,7 +14,7 @@ provider "azurerm" {
 
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group
 resource "azurerm_resource_group" "rg" {
-  name     = "bc-rg-tftest"
+  name     = var.az_resource_group
   location = var.az_location
   tags = {
     owner   = "Brendon Caligari"
@@ -91,7 +91,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   name                = "vm"
-  size                = var.vm_default_size
+  size                = var.az_vm_default_size
   admin_username      = var.admin_user
 
   network_interface_ids = [
@@ -109,9 +109,9 @@ resource "azurerm_linux_virtual_machine" "vm" {
   }
 
   source_image_reference {
-    publisher = var.source_image.publisher
-    offer     = var.source_image.offer
-    sku       = var.source_image.sku
-    version   = var.source_image.version
+    publisher = var.az_source_image.publisher
+    offer     = var.az_source_image.offer
+    sku       = var.az_source_image.sku
+    version   = var.az_source_image.version
   }
 }
