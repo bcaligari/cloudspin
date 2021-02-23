@@ -1,6 +1,6 @@
 # azspin
 
-Spinning up stuff in Azure
+Spinning up stuff in \[mostly\] Azure
 
 ## Dev Environment
 
@@ -28,5 +28,5 @@ https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best
 ## Misc
 
 * Azure locations: `az account list-locations -o table`
-* List VM sizes: `az vm list-sizes -o table -l westeurope`
+* List Azure VM sizes: `az vm list-sizes -o table -l westeurope`
 * List SUSE images: `pint microsoft images --active --json | grep urn | sort | uniq`
