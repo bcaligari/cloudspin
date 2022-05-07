@@ -4,12 +4,12 @@ Spinning up stuff in \[mostly\] Azure
 
 ## Dev Environment
 
-```{text}
-conda create -n dev python=3.9
-conda activate dev
-...
-pip install azure-cli
-```
+* Python 3.9 +
+* `pip install azure-cli`
+
+## Azure credentials
+
+* using user login: `az login`
 
 ## Conventions
 
